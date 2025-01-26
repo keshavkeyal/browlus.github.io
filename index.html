@@ -116,26 +116,11 @@
             </div>
 
             <!-- Clock Section -->
-            <div class="dynamic-card text-center">
-                <div id="time" class="text-3xl font-bold text-gray-800"></div>
-                <div id="date" class="text-sm text-gray-600 mt-2"></div>
-            </div>
+
         </div>
     </div>
 
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-            const timeEl = document.getElementById('time');
-            const dateEl = document.getElementById('date');
-            
-            timeEl.textContent = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'});
-            dateEl.textContent = now.toLocaleDateString([], {weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'});
-        }
-        
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-    </script>
+    
 </body>
 </html>
 
