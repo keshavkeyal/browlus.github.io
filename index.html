@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f4f8 0%, #e5ebee 100%);
+            font-family: 'Inter', sans-serif;
+        }
+        .dynamic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .dynamic-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .dynamic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        .dynamic-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
+        }
+        .dynamic-links a {
+            padding: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-align: center;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+        .dynamic-links a:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-6xl mx-auto space-y-6">
+        <!-- Search Bar -->
+        <div class="dynamic-card mb-6">
+            <form action="https://duckduckgo.com/" method="get" class="flex">
+                <input type="text" name="q" placeholder="Search anything..." 
+                    class="flex-grow p-3 text-sm rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="submit" 
+                    class="bg-blue-500 text-white px-6 py-3 rounded-r-lg hover:bg-blue-600 transition">
+                    Search
+                </button>
+            </form>
+        </div>
+
+        <!-- Dynamic Grid Layout -->
+        <div class="dynamic-grid">
+            <!-- Search Engines -->
+            <div class="dynamic-card">
+                <h2 class="text-xl font-bold mb-4 text-gray-800">Search Engines</h2>
+                <div class="dynamic-links">
+                    <a href="https://www.google.com" target="_blank" aria-label="Google Search" class="bg-blue-500 text-white hover:bg-blue-600">Google</a>
+                    <a href="https://www.bing.com" target="_blank" aria-label="Bing Search" class="bg-green-500 text-white hover:bg-green-600">Bing</a>
+                    <a href="https://duckduckgo.com" target="_blank" aria-label="DuckDuckGo Search" class="bg-indigo-500 text-white hover:bg-indigo-600">DuckDuckGo</a>
+                </div>
+            </div>
+
+            <!-- Shopping Websites -->
+            <div class="dynamic-card">
+                <h2 class="text-xl font-bold mb-4 text-gray-800">Shopping</h2>
+                <div class="dynamic-links">
+                    <a href="https://www.amazon.in" target="_blank" aria-label="Amazon Shopping" class="bg-orange-500 text-white hover:bg-orange-600">Amazon</a>
+                    <a href="https://www.flipkart.com" target="_blank" aria-label="Flipkart Shopping" class="bg-blue-500 text-white hover:bg-blue-600">Flipkart</a>
+                    <a href="https://www.myntra.com" target="_blank" aria-label="Myntra Shopping" class="bg-pink-500 text-white hover:bg-pink-600">Myntra</a>
+                    <a href="https://www.nykaa.com" target="_blank" aria-label="Nykaa Shopping" class="bg-purple-500 text-white hover:bg-purple-600">Nykaa</a>
+                    <a href="https://www.ajio.com" target="_blank" aria-label="AJIO Shopping" class="bg-indigo-500 text-white hover:bg-indigo-700">AJIO</a>
+                </div>
+            </div>
+
+            <!-- Investment Resources -->
+            <div class="dynamic-card">
+                <h2 class="text-xl font-bold mb-4 text-gray-800">Investments</h2>
+                <div class="dynamic-links">
+                    <a href="https://www.moneycontrol.com/markets/corporate-action/bonus/" target="_blank" aria-label="Bonus Info" class="bg-purple-500 text-white hover:bg-purple-600">Bonus</a>
+                    <a href="https://www.moneycontrol.com/mutual-funds/new-fund-offers" target="_blank" aria-label="New Fund Offers" class="bg-pink-500 text-white hover:bg-pink-600">NFO</a>
+                    <a href="https://rbiretaildirect.org.in" target="_blank" aria-label="Government Bonds" class="bg-green-500 text-white hover:bg-green-600">Govt Bonds</a>
+                    <a href="https://www.indmoney.com/" target="_blank" aria-label="Investment Tracking" class="bg-blue-500 text-white hover:bg-blue-600">Investment Tracking</a>
+                </div>
+            </div>
+
+            <!-- News Section -->
+            <div class="dynamic-card">
+                <h2 class="text-xl font-bold mb-4 text-gray-800">News</h2>
+                <div class="dynamic-links">
+                    <a href="https://economictimes.indiatimes.com/news/economy" target="_blank" aria-label="Finance News" class="bg-blue-500 text-white hover:bg-blue-600">Finance News</a>
+                    <a href="https://www.indiatoday.com/crime" target="_blank" aria-label="Crime News" class="bg-red-500 text-white hover:bg-red-600">Crime News</a>
+                    <a href="https://social.cyware.com/cyber-security-news-articles" target="_blank" aria-label="Cyber Security News" class="bg-green-500 text-white hover:bg-green-600">Cyber Security</a>
+                </div>
+            </div>
+
+            <!-- OTT Platforms -->
+            <div class="dynamic-card">
+                <h2 class="text-xl font-bold mb-4 text-gray-800">OTT Platforms</h2>
+                <div class="dynamic-links">
+                    <a href="https://www.primevideo.com" target="_blank" aria-label="Prime Video" class="bg-blue-600 text-white hover:bg-blue-700">Prime Video</a>
+                    <a href="https://www.netflix.com" target="_blank" aria-label="Netflix" class="bg-red-600 text-white hover:bg-red-700">Netflix</a>
+                    <a href="https://www.hotstar.com" target="_blank" aria-label="Hotstar" class="bg-green-600 text-white hover:bg-green-700">Hotstar</a>
+                </div>
+            </div>
+
+            <!-- Clock Section -->
+            <div class="dynamic-card text-center">
+                <div id="time" class="text-3xl font-bold text-gray-800"></div>
+                <div id="date" class="text-sm text-gray-600 mt-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const timeEl = document.getElementById('time');
+            const dateEl = document.getElementById('date');
+            
+            timeEl.textContent = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'});
+            dateEl.textContent = now.toLocaleDateString([], {weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'});
+        }
+        
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>
+
